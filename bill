@@ -51,12 +51,5 @@ def check_cycle(self, cr, uid, ids, context=None):
 
 class updated
 {
- cr.execute('SELECT DISTINCT parent_id '\
-                    'FROM '+self._table+' '\
-                    'WHERE id IN %s '\
-                    'AND parent_id IS NOT NULL',(tuple(ids),))
-        ids = map(itemgetter(0), cr.fetchall())
-        if not level:
-            return False
-        level -= 1
+
 }
